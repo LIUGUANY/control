@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>单选多选，美化</title>
+	<style type="text/css">
+		*{margin:0;padding: 0;}
+		.checkbox_box{
+			margin: 50px;
+			position: relative;
+			display: inline-block;
+			min-width: 25px;
+		}
+		.checkbox_box span.checkBox{
+			background: url(no_checked.png) no-repeat;
+			display: inline-block;
+			width:16px;
+			/* padding-left: 20px; */
+			height: 16px;
+			line-height: 16px;
+		}
+		input[type="checkbox"].checkBox{
+			position: absolute;
+			opacity: 0;
+		}
+		input[type="checkbox"].checkBox:checked+.checkBox{
+			background:url(checked.png) no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<p class="checkbox_box">
+		<input class="checkBox" type="checkbox" name="" value="" />
+		<span class="checkBox"></span>
+	</p>
+</body>
+</html>

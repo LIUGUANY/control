@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>渐变文本</title>
+
+	<!-- 
+		background-clip属性
+		background-clip(1.border-box;2.padding-box;3.content-box;)
+	 -->
+	<style type="text/css">
+		body{
+			width: 100vw;height: 100vh;display: flex;justify-content: center;
+			font-size: 3vw;font-weight: bold;
+		}
+		p{
+			padding:5px 10px;
+			background-image:linear-gradient(135deg,deeppink,dodgerblue);
+			-webkit-background-clip:text;
+			color:transparent;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		单个词或单行文本渐变填充效果单个词或单行文本渐变填充效果单个词或单行文本渐变填充效果单个词或单行文本渐变填充效果单个词或单行文本渐变填充效果单个词或单行文本渐变填充效果单个词或单行文本渐变填充效果
+	</p>
+</body>
+</html>

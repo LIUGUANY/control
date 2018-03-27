@@ -1,0 +1,182 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>jquery三维立体图片展示 - 站长素材</title>
+
+<link rel="stylesheet" type="text/css" href="f3d_index.css" />
+
+<link rel="stylesheet" type="text/css" href="lib/f3d_slider.css" />
+
+<script type='text/javascript' src='lib/jquery.min.js'></script>
+
+<script type='text/javascript' src='lib/jquery.reflection.js'></script>
+
+<script type='text/javascript' src='lib/jquery.color.js'></script>
+
+<script type='text/javascript' src='lib/f3d.min.js'></script>
+
+
+
+<script type="text/javascript">	
+
+jQuery(document).ready(function() {
+
+jQuery.noConflict();
+
+jQuery('#f3d_wrapper').f3d ({
+
+autoStart				: true,
+
+hoverStop				: true,
+
+useReflection			: true,
+
+useShadow				: true,
+
+useMouseX				: true,
+
+useMouseY				: true,
+
+controlsHide			: false,
+
+useLogo					: 'images/logo.png',
+
+activeSlides			: true,
+
+dynamicColors			: false,
+
+sliderWidth				: '100%',
+
+sliderHeight			: '550px',
+
+useVersion				: true,
+
+slide_1					: {'vert': 'bottom', 'horz': 'rightOutside'},
+
+slide_2					: {'vert': 'below', 'horz': 'center'},
+
+slide_3					: {'vert': 'below', 'horz': 'right'},
+
+slide_4					: {'vert': 'bottom', 'horz': 'leftOutside'},
+
+slide_5					: {'vert': 'top', 'horz': 'right'},
+
+slide_6					: {'vert': 'top', 'horz': 'rightOutside'},
+
+});
+
+jQuery("a.tab").click(function (e) { 
+
+jQuery(".active").removeClass("active");   
+
+jQuery(this).addClass("active");
+
+e.preventDefault();
+
+jQuery(".content").slideUp();    
+
+var content_show = jQuery(this).attr("title");  
+
+jQuery("#"+content_show).slideDown();
+
+});
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div id="f3d_wrapper">
+
+<div class="f3d_slide">
+
+<div class="f3d_media"><img src="images/ideas.png" /></div>
+
+<div class="f3d_details">
+
+<h1>Welcome to the<br/>Featured 3D slider</h1>
+
+<p><strong>Looks like</strong> it's a Flash movie...<br/>but it is not!</p>
+</div>
+</div>
+
+<div class="f3d_slide">
+
+<div class="f3d_media"><img src="images/landscape.jpg" /></div>
+
+<div class="f3d_details">
+
+<h1>It's a pure <strong>jQuery code</strong></h1>
+
+<p>that converts static content into a smooth 3D animation</p>
+</div>
+</div>
+
+<div class="f3d_slide">
+
+<div class="f3d_media"><img src="images/photos.jpg" /></div>
+
+<div class="f3d_details">
+
+<h1>Ready for easy integration</h1>
+
+<p>with any <strong>Wordpress theme</strong> or website in general</p>
+</div>
+</div>
+
+<div class="f3d_slide">
+
+<div class="f3d_media"><img src="images/watch.jpg" /></div>
+
+<div class="f3d_details">
+
+<h1>Power options</h1>
+
+<p>Give you <strong>flexible control</strong><br/>over the final look<br/>of your presentation</p>
+</div>
+</div>
+
+<div class="f3d_slide">
+
+<div class="f3d_media"><img src="images/cards.jpg" /></div>
+
+<div class="f3d_details">
+
+<h1>站长素材<br/>images</h1>
+
+<p>Your hidden trump<br/>to look <strong>unique</strong></p>
+</div>
+</div>
+
+<div class="f3d_slide">
+
+<div class="f3d_media"><iframe width="500" height="300" src="http://sc.chinaz.com/" frameborder="0"></iframe></div>
+
+<div class="f3d_details">
+
+<h1>Video content?</h1>
+
+<p>Embedding a <strong>video</strong> is<br/>as <strong>easy</strong> as a child game.</p>
+
+<p><img src="images/icon_youtube.png" /><img src="images/icon_vimeo.png" /><img src="images/icon_flickr.png" /></p>
+
+<p class="normal">Replace slide images with video clips<br/>and you'll get a great 3D video gallery</p>
+</div>
+</div>
+
+</div><!-- end #f3d_wrapper -->
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+
+	<!--
+		justify-content:
+		1、flex-satrt(默认值。项目位于容器的开头)。
+		2、flex-end(项目位于容器的结尾)。
+		3、center(项目位于容器的中心)。
+		4、space-between(项目位于各行之间留有空白的容器内)。
+		5、space-around(项目位于各行之前、之间、之后都留有空白的容器内)。
+		6、initial(设置该属性为它的默认值)
+	 	7、inherit(从父元素继承该属性)
+	 	align-items:
+	 	1.
+	  -->
+
+	<style type="text/css">
+		body{
+			width: 100vw;height: 100vh;display: flex;justify-content: center;
+			align-items:center;font-size: 2vw;font-weight:bold;flex-direction:column;
+		}
+		p{
+			max-width:80vw;
+		}
+		p{
+			display: inline-block;
+		}
+		span,em{
+			line-height: 2;
+			background-image:linear-gradient(135deg,deeppink,dodgerblue);
+			background-clip:text;
+			-webkit-background-clip:text;
+			box-decoration-break:clone;
+			color:transparent;
+		}
+		em{
+			text-decoration-line:underline;
+			-webkit-text-decoration-line:underline;
+			text-decoration-color:black;
+			-webkit-text-decoration-color:black;
+			padding:0 6px;
+		}
+	</style>
+</head>
+<body>
+	<h1>段落<em>每行</em>文本渐变填充效果</h1>
+	<p>
+		<span>W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以css3、html5、javaScript、Vue、React、Mobile、动画等教程、译文和案例为主。</span>
+	</p>
+</body>
+</html>

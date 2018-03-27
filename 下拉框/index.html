@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#select{width: 200px; line-height: 25px; border-radius: 5px; border:1px solid #ccc; font-size: 12px; padding:0 10px; position: relative;}
+		#select i{width: 0; height: 0; border-top: 5px solid #333; border-left: 5px solid transparent;  border-right: 5px solid transparent;
+			position: absolute; top: 10px; right: 10px;}
+			#select span{display: block; height: 25px; cursor: pointer;}
+			#select ul,#select li{padding: 0; margin:0 }
+			#select li{line-height: 30px; color: #666; list-style-type: none; border-bottom: 1px dashed #eee; cursor: pointer;transition: all 1s ease 0s;}
+			#select li:hover{ border-bottom: 1px solid #51A6FF; background-color: #DAF0FF; padding-left: 20px; font-weight: bold; }
+			#select li:last-child{border-bottom: 0}
+			#select ul{display: none;}
+			.flipx { transform: rotateY(180deg); }
+	</style>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script>
+		$(function(){
+			$(".checkspan").bind("click",function(){
+				var ul = $(this).siblings('ul')
+				if(ul.is(":hidden")){
+					ul.slideDown('400', function() {
+						$(this).find("li").bind("click",function(){
+							var selectLi=$(this).text();
+							$("#select span").text(selectLi);
+							$("#select ul").slideUp(400);
+						})
+							ul.mouseleave(function() {
+								$('#select ul').slideUp(400)
+							});
+					});
+				}else{
+					$(this).siblings('ul').slideUp(400)
+				}
+				
+			})
+			
+		})
+	</script>
+</head>
+<body>
+	<div id="select">
+		<i></i>
+		<span class="checkspan">点击下拉框选择</span>
+		<ul>
+			<li>
+				李易峰
+			</li>
+			<li>
+				杨洋
+			</li>
+			<li>
+				陈伟霆
+			</li>
+			<li>
+				张若昀
+			</li>
+			<li>
+				吴磊
+			</li>
+			<li>
+				胡歌
+			</li>
+			<li>
+				以上排序并不代表本人立场
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
